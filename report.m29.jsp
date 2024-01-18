@@ -6,6 +6,37 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>A1tech: Manufacture</title>
+
+<link rel="shortcut icon" href="img/icon.png" />
+<link href="<c:url value="css/bootstrap.min.css"/>" rel="stylesheet"
+	type="text/css" />
+<link href="<c:url value="css/font-awesome.min.css"/>" rel="stylesheet"
+	type="text/css" />
+<link href="css/ionicons.min.css" rel="stylesheet" type="text/css" />
+<link href="plugins/datatables/dataTables.bootstrap.css"
+	rel="stylesheet" type="text/css" />
+<link href="css/AdminLTE.min.css" rel="stylesheet" type="text/css" />
+<link href="css/skins/_all-skins.min.css" rel="stylesheet"
+	type="text/css" />
+<link href="<c:url value="css/helper.css"/>" rel="stylesheet"
+	type="text/css" />
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<script src="plugins/jQuery/jQuery-2.1.3.min.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>
+<script src="plugins/datatables/jquery.dataTables.js"
+	type="text/javascript"></script>
+<script src="plugins/datatables/dataTables.bootstrap.js"
+	type="text/javascript"></script>
+<script src="plugins/slimScroll/jquery.slimscroll.min.js"
+	type="text/javascript"></script>
+<script src='plugins/fastclick/fastclick.min.js'></script>
+<script src="js/app.min.js" type="text/javascript"></script>
+<script src="js/demo.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@0.7.0"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <style>
 #rotate-text {
 	width: 30px;
@@ -13,10 +44,18 @@
 	font-size: 14pt;
 	white-space: nowrap;
 } 
+td{
+
+text-align:center;
+padding:2px;
+
+}
 </style>
 </head>
 <body>
-	<div style="display: flex; padding-left: 15%">
+
+<div class="col-md-12"><%@ include file="header.jsp"%></div>
+	<div style="display: flex; padding:5% 0 0 16%;">
 		<table style="border: 1px solid;">
 			<tr height="300px; ">
 				<td style="border-right: 1px solid;">
@@ -60,7 +99,7 @@
 					<c:forEach var="ps" items="${productItem.psMap}"varStatus="loop">
 						<c:choose>
 							<c:when test="${goods.goodsId==ps.key}">
-								<c:out value="${ps.value}" /> 
+								<c:out value="${ps.value}"/> 
 							</c:when>
 							<c:otherwise></c:otherwise> 
    						</c:choose> 
